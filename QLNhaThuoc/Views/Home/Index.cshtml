@@ -1,0 +1,880 @@
+﻿@{
+    ViewBag.Title = "Nhà thuốc";
+}
+
+<!--Banner-->
+<div>
+    <div class="mySlides fade">
+        <img src="~/Content/images/banner1.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="~/Content/images/banner2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="~/Content/images/banner3.png" style="width:100%">
+
+    </div>
+    <div class="mySlides fade">
+        <img src="~/Content/images/banner4.png" style="width:100%">
+
+    </div>
+    <div class="mySlides fade">
+        <img src="~/Content/images/banner5.png" style="width:100%">
+
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+<!-- End Banner -->
+
+<div class="lc__section section-buy-medicine bg-white relative p-t-32 p-t-md-0 p-x-md-10  m-b-md-8 p-y-md-12 ">
+    <div class="container p-x-md-0">
+        <div class="lc__section__body">
+            <div class="section-title__1 txt-center m-b-24 m-b-md-12">
+                <h2 class="fs-p-28 fs-p-md-20 f-w-500 txt-gray-800">Mua Thuốc Dễ Dàng Tại Long Châu</h2>
+            </div>
+            <div class="featured__controls__1">
+                <ul class="row lc__body-list justify-between no-gutters">
+                    <li class="col lc__body-item">
+                        <div class="txt-center">
+                            <div class="lc__body-picture m-b-16 m-b-md-4">
+                                <picture>
+                                    <img src="~/Content/images/chuptoathuoc.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="lc__body-info">
+                                <div class="lc__body-name txt-primary-700 fs-p-18 f-w-500 txt-uppercase block-none">
+                                    CHỤP TOA THUỐC
+                                </div>
+                                <div class="lc__body-desc fs-p-16 txt-gray-600 block-none">
+                                    đơn giản & nhanh chóng
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <div class="col-auto">
+                        <div class="lc__icon none-block">
+                            <i class="ic-angle-right-double txt-primary"></i>
+                        </div>
+                        <div class="lc__line block-none"></div>
+                    </div>
+                    <li class="col lc__body-item">
+                        <div class="txt-center">
+                            <div class="lc__body-picture m-b-16 m-b-md-4">
+                                <picture>
+
+                                    <img src="~/Content/images/info.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="lc__body-info">
+                                <div class="lc__body-name txt-primary-700 fs-p-18 f-w-500 txt-uppercase block-none">
+                                    NHẬP THÔNG TIN LIÊN LẠC
+                                </div>
+                                <div class="lc__body-desc fs-p-16 txt-gray-600 block-none">
+                                    để được tư vấn đặt hàng
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <div class="col-auto">
+                        <div class="lc__icon">
+                            <i class="ic-angle-right-double txt-primary none-block"></i>
+                        </div>
+                        <div class="lc__line block-none"></div>
+                    </div>
+                    <li class="col lc__body-item">
+                        <div class="txt-center">
+                            <div class="lc__body-picture m-b-16 m-b-md-4">
+                                <picture>
+
+                                    <img src="~/Content/images/duocsi.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="lc__body-info">
+                                <div class="lc__body-name txt-primary-700 fs-p-18 f-w-500 block-none">
+                                    NHẬN BÁO GIÁ TỪ DƯỢC SỸ
+                                </div>
+                                <div class="lc__body-desc fs-p-16 txt-gray-600 block-none">
+                                    kèm theo tư vấn miễn phí
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="lc__body-btn txt-center m-t-24 m-t-md-16 u-flex flex-wrap align-items-center justify-center">
+                    <a href="~/Views/Home/Contact.cshtml" class="btn btn-lg btn-primary circle text-uppercase" onclick="ga('send', 'event', 'Prescription', 'Click Bắt đầu ngay', 'Bắt đầu ngay');">
+                        MUA THUỐC NGAY
+                    </a>
+                    <a href="tel:18006928" class="link fs-ui-16 txt-primary m-l-8 m-l-md-0 m-t-md-8" onclick="ga('send', 'event', 'Prescription', 'Click Mua hàng qua online', 'Prescription - Hotline', {'nonInteraction': 1});">
+                        Hoặc mua qua hotline
+                        <strong>
+                            1800
+                            6928
+                        </strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var device = 'Desktop';
+        if ($(window).width() < 992) {
+            device = 'Mobile';
+        }
+
+        dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+        dataLayer.push({
+            'event': 'productImpression',
+            'platform': device,
+            'ecommerce': {
+                'currencyCode': 'VND',
+                'impressions': [
+                    {
+                        'name': 'Siro bổ phế Bối Mẫu Forte Mom And Baby Tất Thành hỗ trợ giảm ho, đau rát họng, khản tiếng (125ml)',
+                        'id': '00017891',
+                        'price': '55000',
+                        'brand': 'Tất Thành',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '1'
+                    },
+                    {
+                        'name': 'Siro Healthy New Kids hỗ trợ kích thích tiêu hóa, giúp ăn ngon (120ml)',
+                        'id': '00345454',
+                        'price': '81000',
+                        'brand': 'Hải Linh',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '2'
+                    },
+                    {
+                        'name': 'Dung dịch xịt Xuyên Tâm Liên Hải Thượng Vương Royal Care giảm ho, giảm đờm (30ml)',
+                        'id': '00345910',
+                        'price': '97000',
+                        'brand': 'Royal Care',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '3'
+                    },
+                    {
+                        'name': 'Viên uống Bamogin Thành Công giúp tăng cường tuần hoàn não (60 viên)',
+                        'id': '00020412',
+                        'price': '160000',
+                        'brand': 'Thành Công',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '4'
+                    },
+                    {
+                        'name': 'Viên uống Omexxel Ginkgo 120 Excelife hỗ trợ tăng cường tuần hoàn máu não, tốt cho tim mạch (30 viên)',
+                        'id': '00031036',
+                        'price': '364000',
+                        'brand': 'OMEXXEL',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '5'
+                    },
+                    {
+                        'name': 'Cốm vi sinh Lacto Biomin Gold HdPharma tăng lợi khuẩn cho hệ tiêu hóa (5g x 20 gói)',
+                        'id': '00030511',
+                        'price': '135000',
+                        'brand': 'Hdpharma',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '6'
+                    },
+                    {
+                        'name': 'Viên sủi Optimax Immunity Booster Vid - Fighter tăng cường sức đề kháng (20 viên)',
+                        'id': '00033702',
+                        'price': '118000',
+                        'brand': 'Optimax',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '7'
+                    },
+                    {
+                        'name': 'Viên uống Sâm Nhung Bổ Thận NV Dolexpharm giúp tráng dương, mạnh gân cốt (30 viên)',
+                        'id': '00011059',
+                        'price': '113000',
+                        'brand': 'Dolexphar',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '8'
+                    },
+                    {
+                        'name': 'Viên uống Gasso Max Vitamins For Life bổ sung enzym và các thảo mộc (30 viên)',
+                        'id': '00345419',
+                        'price': '335000',
+                        'brand': 'Vitamins For Life',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '9'
+                    },
+                    {
+                        'name': 'Viên sủi Immune++ Tất Thành không đường hỗ trợ tăng sức đề kháng (20 viên)',
+                        'id': '00028876',
+                        'price': '45000',
+                        'brand': 'Tất Thành',
+                        'category': '',
+                        'list': 'trang chủ - bán chạy nhất',
+                        'position': '10'
+                    },
+                ]
+            }
+        });
+    });
+</script>
+
+
+
+<!--Ung thu-->
+<div class="banner-chuyen-trang-ung-thu p-t-32 p-t-md-0 bg-white">
+
+    <a href="https://nhathuoclongchau.com.vn/chuyen-trang-ung-thu/ung-thu-gan">
+        <img src="~/Content/images/banner_ungthu.png" alt="" style="width:100%" />
+        @*<img class="none-block" src="~/Content/images/banner-ungthu-home-m.png" alt="" />*@
+    </a>
+
+</div>
+<!-- End Ung thu-->
+<!--Ban chay -->
+@*<div class="lc__section p-t-32 p-t-md-16 bg-white">
+        <div class="container p-x-md-0">
+            <div class="lc__box-title txt-center p-l-md-10 m-b-16 m-b-md-12 p-x-md-10">
+                <div class="u-flex justify-between align-items-center">
+                    <h2 class="u-flex align-items-center fs-p-20 fs-p-md-16 txt-gray-800 f-w-500">
+                        <i class="ic-hotsale icon-circle-primary bg-danger m-r-8"></i>
+                        Bán Chạy Nhất
+                    </h2>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    var device = 'Desktop';
+                    if ($(window).width() < 992) {
+                        device = 'Mobile';
+                    }
+
+                    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+                    dataLayer.push({
+                        'event': 'productImpression',
+                        'platform': device,
+                        'ecommerce': {
+                            'currencyCode': 'VND',
+                            'impressions': [
+                                {
+                                    'name': 'Siro bổ phế Bối Mẫu Forte Mom And Baby Tất Thành hỗ trợ giảm ho, đau rát họng, khản tiếng (125ml)',
+                                    'id': '00017891',
+                                    'price': '55000',
+                                    'brand': 'Tất Thành',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '1'
+                                },
+                                {
+                                    'name': 'Siro Healthy New Kids hỗ trợ kích thích tiêu hóa, giúp ăn ngon (120ml)',
+                                    'id': '00345454',
+                                    'price': '81000',
+                                    'brand': 'Hải Linh',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '2'
+                                },
+                                {
+                                    'name': 'Viên uống Bamogin Thành Công giúp tăng cường tuần hoàn não (60 viên)',
+                                    'id': '00020412',
+                                    'price': '160000',
+                                    'brand': 'Thành Công',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '3'
+                                },
+                                {
+                                    'name': 'Dung dịch xịt Xuyên Tâm Liên Hải Thượng Vương Royal Care giảm ho, giảm đờm (30ml)',
+                                    'id': '00345910',
+                                    'price': '97000',
+                                    'brand': 'Royal Care',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '4'
+                                },
+                                {
+                                    'name': 'Viên uống Omexxel Ginkgo 120 Excelife hỗ trợ tăng cường tuần hoàn máu não, tốt cho tim mạch (30 viên)',
+                                    'id': '00031036',
+                                    'price': '364000',
+                                    'brand': 'OMEXXEL',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '5'
+                                },
+                                {
+                                    'name': 'Cốm vi sinh Lacto Biomin Gold HdPharma tăng lợi khuẩn cho hệ tiêu hóa (5g x 20 gói)',
+                                    'id': '00030511',
+                                    'price': '135000',
+                                    'brand': 'Hdpharma',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '6'
+                                },
+                                {
+                                    'name': 'Viên sủi Optimax Immunity Booster Vid - Fighter tăng cường sức đề kháng (20 viên)',
+                                    'id': '00033702',
+                                    'price': '118000',
+                                    'brand': 'Optimax',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '7'
+                                },
+                                {
+                                    'name': 'Viên uống Sâm Nhung Bổ Thận NV Dolexpharm giúp tráng dương, mạnh gân cốt (30 viên)',
+                                    'id': '00011059',
+                                    'price': '113000',
+                                    'brand': 'Dolexphar',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '8'
+                                },
+                                {
+                                    'name': 'Viên uống Gasso Max Vitamins For Life bổ sung enzym và các thảo mộc (30 viên)',
+                                    'id': '00345419',
+                                    'price': '335000',
+                                    'brand': 'Vitamins For Life',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '9'
+                                },
+                                {
+                                    'name': 'Viên sủi Immune++ Tất Thành không đường hỗ trợ tăng sức đề kháng (20 viên)',
+                                    'id': '00028876',
+                                    'price': '45000',
+                                    'brand': 'Tất Thành',
+                                    'category': '',
+                                    'list': 'trang chủ - bán chạy nhất',
+                                    'position': '10'
+                                },
+                            ]
+                        }
+                    });
+                });
+            </script>
+            <div class="lc__box-content lc__box-product cate-list-tmp p-l-md-10 scrollX-mobile">
+                <div class="row row-cols-5 reset-row list1">
+                    <div class="sp__banchay col">
+                        <div class="productborder-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/boi-mau-forte-tat-thanh-125ml-siro-bo-phe-19247.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;Siro b\u1ed5 ph\u1ebf B\u1ed1i M\u1eabu Forte Mom And Baby T\u1ea5t Th\u00e0nh h\u1ed7 tr\u1ee3 gi\u1ea3m ho, \u0111au r\u00e1t h\u1ecdng, kh\u1ea3n ti\u1ebfng (125ml)&quot;,&quot;id&quot;:&quot;00017891&quot;,&quot;brand&quot;:&quot;T\u1ea5t Th\u00e0nh&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:55000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/boi-mau-forte-tat-thanh-125ml-siro-bo-phe-19247.html&quot;,&quot;position&quot;:1,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2020/01/00017891-boi-mau-forte-tat-thanh-125ml-siro-bo-phe-4358-5e14_large.jpg" alt="Siro bổ phế Bối Mẫu Forte Mom And Baby Tất Thành hỗ trợ giảm ho, đau rát họng, khản tiếng (125ml)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2020/01/00017891-boi-mau-forte-tat-thanh-125ml-siro-bo-phe-4358-5e14_large.jpg">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">1 Chai x 1 Chai</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00017891>
+                                        Siro bổ phế Bối Mẫu Forte Mom And Baby Tất Thành hỗ trợ giảm ho, đau rát họng, khản tiếng (125ml)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="6" data-id="00017891" data-price="55000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00017891" data-price="55000">55.000đ</span>
+                                            / Chai
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00017891"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp__banchay col">
+                        <div class="product border-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/siro-an-ngon-healthy-new-kid-20.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;Siro Healthy New Kids h\u1ed7 tr\u1ee3 k\u00edch th\u00edch ti\u00eau h\u00f3a, gi\u00fap \u0103n ngon (120ml)&quot;,&quot;id&quot;:&quot;00345454&quot;,&quot;brand&quot;:&quot;H\u1ea3i Linh&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:81000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/siro-an-ngon-healthy-new-kid-20.html&quot;,&quot;position&quot;:2,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2020/09/00345454-siro-an-ngon-healthy-new-kid-8980-5f62_large.jpg" alt="Siro Healthy New Kids hỗ trợ kích thích tiêu hóa, giúp ăn ngon (120ml)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2020/09/00345454-siro-an-ngon-healthy-new-kid-8980-5f62_large.jpg">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">Chai</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00345454>
+                                        Siro Healthy New Kids hỗ trợ kích thích tiêu hóa, giúp ăn ngon (120ml)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="6" data-id="00345454" data-price="81000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00345454" data-price="81000">81.000đ</span>
+                                            / Chai
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00345454"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp__banchay col">
+                        <div class="product border-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/bamogin-thanh-cong-6x10-20580.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;Vi\u00ean u\u1ed1ng Bamogin Th\u00e0nh C\u00f4ng gi\u00fap t\u0103ng c\u01b0\u1eddng tu\u1ea7n ho\u00e0n n\u00e3o (60 vi\u00ean)&quot;,&quot;id&quot;:&quot;00020412&quot;,&quot;brand&quot;:&quot;Th\u00e0nh C\u00f4ng&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:160000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/bamogin-thanh-cong-6x10-20580.html&quot;,&quot;position&quot;:3,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2020/10/00020412-bamogin-thanh-cong-6x10-2084-5f92_large.JPG" alt="Viên uống Bamogin Thành Công giúp tăng cường tuần hoàn não (60 viên)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2020/10/00020412-bamogin-thanh-cong-6x10-2084-5f92_large.JPG">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">Hộp 6 Vỉ x 10 Viên</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00020412>
+                                        Viên uống Bamogin Thành Công giúp tăng cường tuần hoàn não (60 viên)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="1" data-id="00020412" data-price="160000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00020412" data-price="160000">160.000đ</span>
+                                            / Hộp
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00020412"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp__banchay col">
+                        <div class="product border-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/xit-hong-xuyen-tam-lien-hai-thuong-vuong-30ml-34071.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;Dung d\u1ecbch x\u1ecbt Xuy\u00ean T\u00e2m Li\u00ean H\u1ea3i Th\u01b0\u1ee3ng V\u01b0\u01a1ng Royal Care gi\u1ea3m ho, gi\u1ea3m \u0111\u1eddm (30ml)&quot;,&quot;id&quot;:&quot;00345910&quot;,&quot;brand&quot;:&quot;Royal Care&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:97000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/xit-hong-xuyen-tam-lien-hai-thuong-vuong-30ml-34071.html&quot;,&quot;position&quot;:4,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/05/00345910-xit-hong-xuyen-tam-lien-hai-thuong-vuong-30ml-5572-6272_large.jpg" alt="Dung dịch xịt Xuyên Tâm Liên Hải Thượng Vương Royal Care giảm ho, giảm đờm (30ml)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/05/00345910-xit-hong-xuyen-tam-lien-hai-thuong-vuong-30ml-5572-6272_large.jpg">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">Hộp</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00345910>
+                                        Dung dịch xịt Xuyên Tâm Liên Hải Thượng Vương Royal Care giảm ho, giảm đờm (30ml)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="1" data-id="00345910" data-price="97000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00345910" data-price="97000">97.000đ</span>
+                                            / Hộp
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00345910"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp__banchay col">
+                        <div class="product border-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/omexxel-ginkgo-120-2x15-31175.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;Vi\u00ean u\u1ed1ng Omexxel Ginkgo 120 Excelife h\u1ed7 tr\u1ee3 t\u0103ng c\u01b0\u1eddng tu\u1ea7n ho\u00e0n m\u00e1u n\u00e3o, t\u1ed1t cho tim m\u1ea1ch (30 vi\u00ean)&quot;,&quot;id&quot;:&quot;00031036&quot;,&quot;brand&quot;:&quot;OMEXXEL&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:364000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/omexxel-ginkgo-120-2x15-31175.html&quot;,&quot;position&quot;:5,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/10/00031036-omexxel-ginkgo-120-2x15-5958-633e_large.jpg" alt="Viên uống Omexxel Ginkgo 120 Excelife hỗ trợ tăng cường tuần hoàn máu não, tốt cho tim mạch (30 viên)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/10/00031036-omexxel-ginkgo-120-2x15-5958-633e_large.jpg">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">Hộp 2 Vỉ x 15 Viên</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00031036>
+                                        Viên uống Omexxel Ginkgo 120 Excelife hỗ trợ tăng cường tuần hoàn máu não, tốt cho tim mạch (30 viên)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="1" data-id="00031036" data-price="364000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00031036" data-price="364000">364.000đ</span>
+                                            / Hộp
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00031036"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp__banchay col">
+                        <div class="product border-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/lacto-biomin-gold-new-hdpharma-20-goi-30659.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;C\u1ed1m vi sinh Lacto Biomin Gold HdPharma t\u0103ng l\u1ee3i khu\u1ea9n cho h\u1ec7 ti\u00eau h\u00f3a (5g x 20 g\u00f3i)&quot;,&quot;id&quot;:&quot;00030511&quot;,&quot;brand&quot;:&quot;Hdpharma&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:135000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/lacto-biomin-gold-new-hdpharma-20-goi-30659.html&quot;,&quot;position&quot;:6,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2021/04/00030511-lacto-biomin-gold-new-hdpharma-20-goi-2174-607c_large.jpg" alt="Cốm vi sinh Lacto Biomin Gold HdPharma tăng lợi khuẩn cho hệ tiêu hóa (5g x 20 gói)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2021/04/00030511-lacto-biomin-gold-new-hdpharma-20-goi-2174-607c_large.jpg">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">Hộp 20 gói</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00030511>
+                                        Cốm vi sinh Lacto Biomin Gold HdPharma tăng lợi khuẩn cho hệ tiêu hóa (5g x 20 gói)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="1" data-id="00030511" data-price="135000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00030511" data-price="135000">135.000đ</span>
+                                            / Hộp
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00030511"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp__banchay col">
+                        <div class="product border-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/vien-uong-tang-suc-khang-optimax-immunity-booster-vid-fighter-20v-33794.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;Vi\u00ean s\u1ee7i Optimax Immunity Booster Vid - Fighter t\u0103ng c\u01b0\u1eddng s\u1ee9c \u0111\u1ec1 kh\u00e1ng (20 vi\u00ean)&quot;,&quot;id&quot;:&quot;00033702&quot;,&quot;brand&quot;:&quot;Optimax&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:118000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/vien-uong-tang-suc-khang-optimax-immunity-booster-vid-fighter-20v-33794.html&quot;,&quot;position&quot;:7,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/06/00033702-vien-uong-tang-suc-khang-optimax-immunity-booster-vid-fighter-20v-4698-62ae_large.jpg" alt="Viên sủi Optimax Immunity Booster Vid - Fighter tăng cường sức đề kháng (20 viên)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/06/00033702-vien-uong-tang-suc-khang-optimax-immunity-booster-vid-fighter-20v-4698-62ae_large.jpg">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">1 Tuýp x 20 Viên</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00033702>
+                                        Viên sủi Optimax Immunity Booster Vid - Fighter tăng cường sức đề kháng (20 viên)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="2" data-id="00033702" data-price="118000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00033702" data-price="118000">118.000đ</span>
+                                            / Tuýp
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00033702"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp__banchay col">
+                        <div class="product border-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/sam-nhung-bo-than-nv-hai-linh-30v-321.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;Vi\u00ean u\u1ed1ng S\u00e2m Nhung B\u1ed5 Th\u1eadn NV Dolexpharm gi\u00fap tr\u00e1ng d\u01b0\u01a1ng, m\u1ea1nh g\u00e2n c\u1ed1t (30 vi\u00ean)&quot;,&quot;id&quot;:&quot;00011059&quot;,&quot;brand&quot;:&quot;Dolexphar&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:113000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/sam-nhung-bo-than-nv-hai-linh-30v-321.html&quot;,&quot;position&quot;:8,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2019/09/00011059-sam-nhung-bo-than-nv-1276-5d78_large.jpg" alt="Viên uống Sâm Nhung Bổ Thận NV Dolexpharm giúp tráng dương, mạnh gân cốt (30 viên)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2019/09/00011059-sam-nhung-bo-than-nv-1276-5d78_large.jpg">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">Hộp 30 viên</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00011059>
+                                        Viên uống Sâm Nhung Bổ Thận NV Dolexpharm giúp tráng dương, mạnh gân cốt (30 viên)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="1" data-id="00011059" data-price="113000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00011059" data-price="113000">113.000đ</span>
+                                            / Hộp
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00011059"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp__banchay col">
+                        <div class="product border-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/gasso-max-thao-duoc-ho-tro-tieu-hoa-45.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;Vi\u00ean u\u1ed1ng Gasso Max Vitamins For Life b\u1ed5 sung enzym v\u00e0 c\u00e1c th\u1ea3o m\u1ed9c (30 vi\u00ean)&quot;,&quot;id&quot;:&quot;00345419&quot;,&quot;brand&quot;:&quot;Vitamins For Life&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:335000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/gasso-max-thao-duoc-ho-tro-tieu-hoa-45.html&quot;,&quot;position&quot;:9,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/09/00345419-gasso-max-thao-duoc-ho-tro-tieu-hoa-9444-6328_large.jpg" alt="Viên uống Gasso Max Vitamins For Life bổ sung enzym và các thảo mộc (30 viên)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/09/00345419-gasso-max-thao-duoc-ho-tro-tieu-hoa-9444-6328_large.jpg">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">Chai</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00345419>
+                                        Viên uống Gasso Max Vitamins For Life bổ sung enzym và các thảo mộc (30 viên)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="6" data-id="00345419" data-price="335000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00345419" data-price="335000">335.000đ</span>
+                                            / Chai
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00345419"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp__banchay col">
+                        <div class="product border-default hover-product transition bg-white radius-12">
+                            <a href="/thuc-pham-chuc-nang/vien-sui-khong-duong-multivitamin-tang-suc-de-khang-immune-tuyp-20-vien-29170.html?src=ban-chay" onclick="productClick({&quot;name&quot;:&quot;Vi\u00ean s\u1ee7i Immune++ T\u1ea5t Th\u00e0nh kh\u00f4ng \u0111\u01b0\u1eddng h\u1ed7 tr\u1ee3 t\u0103ng s\u1ee9c \u0111\u1ec1 kh\u00e1ng (20 vi\u00ean)&quot;,&quot;id&quot;:&quot;00028876&quot;,&quot;brand&quot;:&quot;T\u1ea5t Th\u00e0nh&quot;,&quot;category&quot;:&quot;&quot;,&quot;price&quot;:45000,&quot;url&quot;:&quot;\/thuc-pham-chuc-nang\/vien-sui-khong-duong-multivitamin-tang-suc-de-khang-immune-tuyp-20-vien-29170.html&quot;,&quot;position&quot;:10,&quot;list&quot;:&quot;trang ch\u1ee7 - b\u00e1n ch\u1ea1y nh\u1ea5t&quot;})" class="p-x-12 p-y-12 m-b-16 p-x-md-0 p-y-md-8 m-b-md-0">
+                                <div class="product-image txt-center m-b-12 m-b-md-8">
+                                    <picture>
+                                        <img data-src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/06/00028876-vien-sui-khong-duong-immune-60mg-tuyp-20-vien-2855-62ae_large.jpg" alt="Viên sủi Immune++ Tất Thành không đường hỗ trợ tăng sức đề kháng (20 viên)" src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/06/00028876-vien-sui-khong-duong-immune-60mg-tuyp-20-vien-2855-62ae_large.jpg">
+                                    </picture>
+                                    <div class="product__label">
+                                        <div class="badge badge-xxs badge-primary circle">1 Tuýp x 20 Viên</div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name truncate2 fs-p-16 txt-gray-700 hover-link fs-p-md-14 f-w-400 m-b-8 m-b-md-4" data-id=00028876>
+                                        Viên sủi Immune++ Tất Thành không đường hỗ trợ tăng sức đề kháng (20 viên)
+                                    </h3>
+                                    <div class="product-info__price txt-gray-700 fs-p-md-14 fs-p-16" data-unit="2" data-id="00028876" data-price="45000">
+                                        <div class="product-price">
+                                            <span class="fs-p-18 txt-primary-700 f-w-500 fs-p-md-14 price_item__00028876" data-price="45000">45.000đ</span>
+                                            / Tuýp
+                                        </div>
+                                        <strike class="fs-p-16 txt-gray fs-p-md-13 price_item__strike__00028876"></strike>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+<!--End Ban chay -->
+
+<section class="featured spad">
+    <div class="container">
+        <div class="row">
+            <div class="lc__box-title txt-center p-l-md-10 m-b-16 m-b-md-12 p-x-md-10">
+                <div class="u-flex justify-between align-items-center">
+                    <h2 class="u-flex align-items-center fs-p-20 fs-p-md-16 txt-gray-800 f-w-500">
+                        <i class="ic-hotsale icon-circle-primary bg-danger m-r-8"></i>
+                        Bán Chạy Nhất
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row featured__filter">
+        <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg">
+                    <img src="~/Content/images/Thuoc/cebraton.png" />
+                    <ul class="featured__item__pic__hover">
+                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">Thuốc Cebraton Traphaco</a></h6>
+                    <h5>160,000VND</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg">
+                    <img src="~/Content/images/DuocMyPham/Serum.png" />
+                    <ul class="featured__item__pic__hover">
+
+                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">Serum Rebirth Cellular </a></h6>
+                    <h5>230.00VND</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg">
+                    <img src="~/Content/images/ThietBiYTe/Kids.png" />
+                    <ul class="featured__item__pic__hover">
+
+                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">Khẩu trang 4D Kids Niva</a></h6>
+                    <h5>45,000VND</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg">
+                    <img src="~/Content/images/ThucPhamChucNang/Collagen.png" />
+                    <ul class="featured__item__pic__hover">
+                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">Nước uống Collagen Jpanwell Hana</a></h6>
+                    <h5>285,000VND</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg">
+                    <img src="~/Content/images/Thuoc/Viên uống Bamogin.png" />
+                    <ul class="featured__item__pic__hover">
+
+                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">Viên uống Bamogin Thành Công</a></h6>
+                    <h5>160,000VND</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg">
+                    <img src="~/Content/images/DuocMyPham/Roche-Posay.png" />
+                    <ul class="featured__item__pic__hover">
+
+                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">Kem dưỡng môi La Roche-Posay</a></h6>
+                    <h5>215,00VND</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg">
+                    <img src="~/Content/images/ThietBiYTe/Microlife.png" />
+                    <ul class="featured__item__pic__hover">
+
+                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">Máy đo huyết áp tự động</a></h6>
+                    <h5>1,350,000VND</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg">
+                    <img src="~/Content/images/ThucPhamChucNang/Onagre.png" />
+                    <ul class="featured__item__pic__hover">
+                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">Viên uống Onagre Cevrai h</a></h6>
+                    <h5>505,000VND</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+
+<!-- GOC SUC KHOE -->
+<section class="from-blog spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title from-blog__title">
+                    <h2>Góc Sức Khỏe</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic image_4" href="#">
+                        <a href="/Home/Contact.cshtml">
+                        <img src="~/Content/images/SucKhoe/dauhong.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="blog__item__text">
+                        <ul>
+                            <li><i class="fa fa-calendar-o"></i> 02/04/2023</li>
+                            <li><i class="fa fa-comment-o"></i> 10</li>
+                        </ul>
+                        <h5><a href="#">Bị viêm họng nên làm gì để bệnh mau khỏi bạn đã biết chưa?</a></h5>
+                        <p>Khi thời tiết chuyển mùa, sức đề kháng của cơ thể thường sẽ suy giảm, dẫn đến nguy cơ mắc cảm .... </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic image_4" href="#">
+                        <a href="/Home/Contact">
+                            <img src="~/Content/images/SucKhoe/gan.png" alt="">
+                        </a>
+                    </div>
+                    <div class="blog__item__text">
+                        <ul>
+                            <li><i class="fa fa-calendar-o"></i> 12/02/2023</li>
+                            <li><i class="fa fa-comment-o"></i> 29</li>
+                        </ul>
+                        <h5><a href="#">Viêm gan B mạn tính có lây không? Có trị dứt điểm được không?</a></h5>
+                        <p>Viêm gan B mạn tính có lây không? Có nguy hiểm khôn... </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic image_4" href="#">
+                        <a href="/Home/Contact">
+                            <img src="~/Content/images/SucKhoe/sosinh.png" alt="">
+                        </a>
+                    </div>
+                    <div class="blog__item__text">
+                        <ul>
+                            <li><i class="fa fa-calendar-o"></i> 01/04/2023</li>
+                            <li><i class="fa fa-comment-o"></i> 17</li>
+                        </ul>
+                        <h5><a href="#">Trẻ sơ sinh bị viêm họng: Triệu chứng và cách điều trị</a></h5>
+                        <p>Nếu trẻ sơ sinh bị viêm họng, cha mẹ không nên coi thường vì bệnh có thể gây ra những biến chứng nguy... </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- GOC SUC KHOE -->

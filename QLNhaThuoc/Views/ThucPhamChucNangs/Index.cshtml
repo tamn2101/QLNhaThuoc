@@ -1,0 +1,65 @@
+﻿@model IEnumerable<QLNhaThuoc.Models.ThucPhamChucNang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="featured spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title">
+                    <h2>Giỏ Hàng</h2>
+                </div>
+                <div class="featured__controls">
+                    <ul>
+                        <li>@Html.ActionLink("HOME", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>Giỏ hàng</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="featured__2">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4">
+                            <div class="featured__item">
+                                <div class="image_4" href="#">
+                                    <a href="/ThucPhamChucNang/Details/@item.MaThucPham">
+                                        <img src="/@item.Hinh">
+                                    </a>
+                                </div>
+                                <p class="featured__item__text">@item.TenThucPham</p>
+                                <p class="featured__item__tex__1">@item.GiaBan.ToString("N0") VND</p>
+                                @*<div class="buy_bt"><a href="#">Mua ngay</a></div>*@
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+
+            @*<div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="Content/images/Thuoc/cebraton.png">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Thuốc Cebraton Traphaco</a></h6>
+                        <h5>160.000đ</h5>
+                    </div>
+                </div>*@
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+        <i class="fa fa-long-arrow-left" style="font-size:24px"></i>
+    </a>
+    <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+        <i class="fa fa-long-arrow-right" style="font-size:24px"></i>
+    </a>
+</section>

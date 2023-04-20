@@ -1,0 +1,58 @@
+﻿@model QLNhaThuoc.Models.ThucPhamChucNang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<main>
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large"
+                                 src="/@Model.Hinh" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                        <h3>@Model.TenThucPham</h3>
+                        <div class="product__details__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span>(18 reviews)</span>
+                        </div>
+                        <b>Đơn vị bán:</b> <span>@Model.DonViTinh</span>
+                        <div class="product__details__price"> Gía bán:  @Model.GiaBan.ToString("N0")</div>
+                        <p>Công dụng: @Model.CongDung</p>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="primary-btn">ADD TO CARD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+@*section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaThucPham }) 
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

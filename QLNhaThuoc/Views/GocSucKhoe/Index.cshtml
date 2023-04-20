@@ -1,0 +1,195 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Blog Section Begin -->
+<section class="blog spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-5">
+                <div class="blog__sidebar">
+                    @*<div class="blog__sidebar__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><span class="icon_search"></span></button>
+                            </form>
+                        </div>*@
+                    @*<div class="blog__sidebar__item">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">Beauty (20)</a></li>
+                                <li><a href="#">Food (5)</a></li>
+                                <li><a href="#">Life Style (9)</a></li>
+                                <li><a href="#">Travel (10)</a></li>
+                            </ul>
+                        </div>*@
+                    <div class="blog__sidebar__item">
+                        <h4>Bài nổi bật</h4>
+                        <div class="blog__sidebar__recent">
+                            <a href="#" class="blog__sidebar__recent__item">
+                                <div class="blog__sidebar__recent__item__pic">
+                                    <img src="~/Content/images/SucKhoe/thele.png" alt="">
+                                </div>
+                                <div class="blog__sidebar__recent__item__text">
+                                    <h6>THỂ LỆ DỊCH VỤ MUA TRƯỚC  <br /> TRẢ SAU LÃI SUẤT 0%</h6>
+                                    <span>31/03/2023</span>
+                                </div>
+                            </a>
+                            <a href="#" class="blog__sidebar__recent__item">
+                                <div class="blog__sidebar__recent__item__pic">
+                                    <img src="~/Content/images/SucKhoe/cohoi.png" alt="">
+                                </div>
+                                <div class="blog__sidebar__recent__item__text">
+                                    <h6>TẾT KHỎE NHƯ Ý <br /> CƠ HỘI TRÚNG 68 CHỈ VÀNG 9999</h6>
+                                    <span>25/03/2023</span>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    @*<div class="blog__sidebar__item">
+                            <h4>Search By</h4>
+                            <div class="blog__sidebar__item__tags">
+                                <a href="#">Apple</a>
+                                <a href="#">Beauty</a>
+                                <a href="#">Vegetables</a>
+                                <a href="#">Fruit</a>
+                                <a href="#">Healthy Food</a>
+                                <a href="#">Lifestyle</a>
+                            </div>
+                        </div>*@
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-7">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="~/Content/images/SucKhoe/dauhong.jpg" alt="">
+                            </div>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li><i class="fa fa-calendar-o"></i> 03/04/2023</li>
+                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                </ul>
+                                <h5><a href="#">6Bị viêm họng nên làm gì để bệnh mau khỏi bạn đã biết chưa?</a></h5>
+                                <p>
+                                    Khi thời tiết chuyển mùa, sức đề kháng của cơ thể thường sẽ suy giảm, dẫn đến nguy cơ mắc cảm lạnh và viêm họng....
+                                </p>
+                                <a href="#" class="blog__btn">Đọc tiếp<span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="~/Content/images/SucKhoe/gan.png" alt="">
+                            </div>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li><i class="fa fa-calendar-o"></i> 31/03/2023</li>
+                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                </ul>
+                                <h5><a href="#">Viêm gan B mạn tính có lây không? Có trị dứt điểm được không?</a></h5>
+                                <p>
+                                    Viêm gan B mạn tính có lây không? Có nguy hiểm không và trị dứt điểm được
+                                    không l.....
+                                </p>
+                                <a href="#" class="blog__btn">Đọc tiếp <span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="~/Content/images/SucKhoe/sosinh.png" alt="">
+                            </div>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li><i class="fa fa-calendar-o"></i> 01/04/2023</li>
+                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                </ul>
+                                <h5><a href="#">Trẻ sơ sinh bị viêm họng: Triệu chứng và cách điều trị</a></h5>
+                                <p>
+                                    Với trẻ sơ sinh, viêm họng là một vấn đề cần được quan tâm
+                                    đặc biệt, do cơ thể của bé lúc này vẫn chưa hoàn thiệ...
+                                </p>
+                                <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="~/Content/images/SucKhoe/tra.png" alt="">
+                            </div>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li><i class="fa fa-calendar-o"></i> 01/04/2023</li>
+                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                </ul>
+                                <h5><a href="#">Bị viêm họng nên uống gì để giảm nhanh cơn đau?</a></h5>
+                                <p>
+                                    Vi khuẩn và virus thường phát triển mạnh mẽ trong giai đoạn chuyển mùa
+                                    khiến bạn dễ mắc bệnh đường hô hấp, trong đó có bệnh viêm họ....
+                                </p>
+                                <a href="#" class="blog__btn">Đọc tiếp <span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="~/Content/images/SucKhoe/khoailang.png" alt="">
+                            </div>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li><i class="fa fa-calendar-o"></i> 31/03/2023</li>
+                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                </ul>
+                                <h5><a href="#">Mách bạn 3 cách làm bánh khoai lang ngon và đơn giản ai ăn cũng mê</a></h5>
+                                <p>
+                                    Khoai lang là một loại rau củ ngon và giàu chất dinh dưỡng,
+                                    có thể được chế biến theo nhiều cách, chẳng hạn như chiên, luộc, hấp...
+                                </p>
+                                <a href="#" class="blog__btn">Đọc tiếp <span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="img/blog/blog-6.jpg" alt="">
+                            </div>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li><i class="fa fa-calendar-o"></i> 31/03/2023</li>
+                                    <li><i class="fa fa-comment-o"></i> 5</li>
+                                </ul>
+                                <h5><a href="#">Công nghệ IPL mang đến vẻ đẹp tươi trẻ cho phụ nữ</a></h5>
+                                <p>
+                                    Công nghệ IPL là một phương pháp điều trị da bằng ánh sáng được sử dụng
+                                    để giảm thiểu các vấn đề liên quan đến sắc tố da và lão hóa da...
+                                </p>
+                                <a href="#" class="blog__btn">Đọc tiếp <span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="product__pagination blog__pagination">
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Section End -->
